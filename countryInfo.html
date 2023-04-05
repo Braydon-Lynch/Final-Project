@@ -7,14 +7,27 @@
 <body>
     <form action = "javascript:getCountryInfo()">
         <label for = "countrySelection">Choose a Country from the list</label><br>
-        <select id = "countrySelection" name = "countrySelection"></select>
+        <select id = "countrySelection" name = "countrySelection" onchange="getCountryInfo()"></select>
 
+        <!--Name and flag-->
         <label for = "countryInfo">Country Info:</label>
         <br><br>
         <div id = "flagImg"></div>
-
-        <label for = "populationDensity">Population:</label>
+        
+        <!--Population-->
+        <label for = "populationDisplay">Population:</label>
         <br><br>
+        <input type = "text" id = "populationDisplay" name = "populationDisplay"><br><br>
+
+        <!--Area in Sq. miles/km-->
+        <label for = "aUnitSelection">Area in:</label><br>
+        <select id = "aUnitSelection" name = "aUnitSelection">
+            <option value = "miles">Sq. Miles</option>
+            <option value = "km">Sq. KM</option>
+        </select><br>
+        <input type = "text" id = "areaDisplay" name = "areaDisplay"><br>
+
+        
     </form>
 </body>
 </html>
