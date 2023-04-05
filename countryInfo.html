@@ -5,9 +5,13 @@
     <script src = "script.js" defer></script>
 </head>
 <body>
-    <form action = "javascript:getCountryInfo()">
+
+<h2>COUNTRIES OF THE WORLD</h2>
+
+    <form id = "countryInfoForm">    <!--  action = "javascript:getCountryInfo()"  -->
         <label for = "countrySelection">Choose a Country from the list</label><br>
-        <select id = "countrySelection" name = "countrySelection" onchange="getCountryInfo()"></select>
+        <select id = "countrySelection" name = "countrySelection" onchange="getCountryInfo()"></select><br><br>
+
 
         <!--Name and flag-->
         <label for = "countryInfo">Country Info:</label>
@@ -27,7 +31,9 @@
         </select><br>
         <input type = "text" id = "areaDisplay" name = "areaDisplay"><br>
 
-        
+        <h2>Area in:</h2>
+        <input type = "radio" name = "pUnitSelection" value = "miles" checked><label for = "miles">Per Square Mile</label><br>
+
     </form>
 </body>
 </html>
