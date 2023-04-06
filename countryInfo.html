@@ -8,31 +8,36 @@
 
 <h2>COUNTRIES OF THE WORLD</h2>
 
-    <form id = "countryInfoForm">    <!--  action = "javascript:getCountryInfo()"  -->
-        <label for = "countrySelection">Choose a Country from the list</label><br>
-        <select id = "countrySelection" name = "countrySelection" onchange="getCountryInfo()"></select><br><br>
+    <form id="countryInfoForm">    <!--  action = "javascript:getCountryInfo()"  -->
+        <label for="countrySelection">Choose a Country from the list</label><br>
+        <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()"></select><br><br>
 
 
         <!--Name and flag-->
-        <label for = "countryInfo">Country Info:</label>
-        <br><br>
-        <div id = "flagImg"></div>
+        <label for="countryInfo"><h4>Country Info:</h4></label>
+        <br>
+        <div id="flagImg"></div>
         
         <!--Population-->
-        <label for = "populationDisplay">Population:</label>
-        <br><br>
-        <input type = "text" id = "populationDisplay" name = "populationDisplay"><br><br>
+        <label for="populationDisplay"><h4>Population:</h4></label>
+        <input type="text" id="populationDisplay" name="populationDisplay"><br>
 
         <!--Area in Sq. miles/km-->
-        <label for = "aUnitSelection">Area in:</label><br>
-        <select id = "aUnitSelection" name = "aUnitSelection">
-            <option value = "miles">Sq. Miles</option>
-            <option value = "km">Sq. KM</option>
+        <label for="aUnitSelection"><h4>Area in:</h4></label>
+        <select id="aUnitSelection" name="aUnitSelection">
+            <option value="miles">Sq. Miles</option>
+            <option value="km">Sq. KM</option>
         </select><br>
-        <input type = "text" id = "areaDisplay" name = "areaDisplay"><br>
+        <input type="text" id="areaDisplay" name="areaDisplay"><br>
 
-        <h2>Area in:</h2>
-        <input type = "radio" name = "pUnitSelection" value = "miles" checked><label for = "miles">Per Square Mile</label><br>
+        <!--Population per Area in Sq. miles/Km -->
+        <h4>Population per:</h4>
+        <input type="radio" name="pUnitSelection" value="miles" checked><label for="miles">Sq. Mile</label><br>
+        <input type="radio" name="pUnitSelection" value="km"><label for="km">Sq. KM</label><br>
+        <input type="text" id="areaDisplay" name="areaDisplay"><br>
+
+        <!--Percentage of World Population-->
+        <h4>Percentage of the Worlds Total Population:</h4>
 
     </form>
 </body>
