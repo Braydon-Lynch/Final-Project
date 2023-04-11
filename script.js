@@ -39,7 +39,7 @@ function getCountryInfo(menuRef)
 function calcPopulationPercentage()
 {
     //calculate populaton %
-    let popPercent
+    
 }
 
 //calculate population density
