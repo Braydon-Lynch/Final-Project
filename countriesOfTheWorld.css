@@ -4,3 +4,23 @@ Author: Braydon Lynch
 Date: 04/11/23
 */
 
+#countryInfoForm
+{
+    background-color: rgb(142, 201, 228);
+    text-align: center;
+}
+h2{
+    text-align: center;
+    background-color: rgb(139, 145, 151);
+}
+html{
+    height: 100%;
+ }
+ body{
+    width: 95%;
+    min-width: 640px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 100%;
+ }
