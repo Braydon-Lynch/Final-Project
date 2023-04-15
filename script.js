@@ -72,13 +72,10 @@ function getCountryInfo(menuRef)
 
     //calculate percentage of the worlds population
     let percentDisplay = document.querySelector("#percentDisplay");
-    let worldPopulation = 0;
-
-    for(let i=0; i<countryInfo.length; i++){
-        worldPopulation+=countryInfo[i].Population;
-    }
-
-    let percentage = ((countryInfo.find(country=>country.Name===selectedCountry).Population/worldPopulation))*100;
+    let worldPopulation = 8045311447 //world population according to "Macrotrends.net 2023"
+    let countryPopulation = countryInfo.find(country=>country.Name===selectedCountry).Population;
+    let percentOfWorldsPopulation = ((countryPopulation/worldPopulation)*100).toFixed(2);
+    percentDisplay.value = `${percentOfWorldsPopulation}%`;
 
     //change the href or the wikipage link/button
     let wikiLink = document.querySelector("#wikiPageLink");
@@ -92,6 +89,7 @@ let pUnitSelection = document.querySelectorAll("input[name='pUnitSelection']");
 for(let i=0; i<pUnitSelection.length; i++){
     pUnitSelection[i].addEventListener('change', getCountryInfo);
 }
+
 
 //calculate population density
 
