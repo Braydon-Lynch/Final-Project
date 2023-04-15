@@ -45,12 +45,25 @@ function getCountryInfo(menuRef)
     let imgHTML = `<img src="flags/${selectedCountry}.png"></img>`;
     flagImgDiv.innerHTML = imgHTML;
 
+    //display area
+    let sqAreaDisplay = document.querySelector("#sqAreaDisplay");
+    let aUnitSelection = document.querySelector("#aUnitSelection").value;
+    let area = countryInfo.find(country=>country.Name===selectedCountry).Area;
+
+    if(aUnitSelection==="km"){
+        area=(area*2.58999).toFixed(2);
+        sqAreaDisplay.value=`${area} Sq. KM's`;
+    }else{
+        sqAreaDisplay.value=`${area} Sq. Miles`;
+    }
 
     //change the href or the wikipage link/button
     let wikiLink = document.querySelector("#wikiPageLink");
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/" + selectedCountry); 
 }
 
+let aUnitSelection = document.querySelector("#aUnitSelection");
+aUnitSelection.addEventListener("change", getCountryInfo);
 
 //calculate population density
 
