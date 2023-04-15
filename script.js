@@ -57,6 +57,29 @@ function getCountryInfo(menuRef)
         sqAreaDisplay.value=`${area} Sq. Miles`;
     }
 
+    //display population per sq. miles and sq. kms
+    let popPerDisplay = document.querySelector("#popPerDisplay");
+    let pUnitSelection = formRef["pUnitSelection"].value;
+    let populationDensity;
+
+    if(pUnitSelection==="km"){
+        populationDensity=(countryInfo.find(country=>country.Name===selectedCountry).Population/area).toFixed(2);
+        popPerDisplay.value=`${populationDensity} per Sq. KM's`;
+    }else{
+        populationDensity=(countryInfo.find(country=>country.Name===selectedCountry).Population/(area/2.58999)).toFixed(2);
+        popPerDisplay.value=`${populationDensity} per Sq. Miles`;
+    }
+
+    //calculate percentage of the worlds population
+    let percentDisplay = document.querySelector("#percentDisplay");
+    let worldPopulation = 0;
+
+    for(let i=0; i<countryInfo.length; i++){
+        worldPopulation+=countryInfo[i].Population;
+    }
+
+    let percentage = ((countryInfo.find(country=>country.Name===selectedCountry).Population/worldPopulation))*100;
+
     //change the href or the wikipage link/button
     let wikiLink = document.querySelector("#wikiPageLink");
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/" + selectedCountry); 
@@ -64,6 +87,11 @@ function getCountryInfo(menuRef)
 
 let aUnitSelection = document.querySelector("#aUnitSelection");
 aUnitSelection.addEventListener("change", getCountryInfo);
+
+let pUnitSelection = document.querySelectorAll("input[name='pUnitSelection']");
+for(let i=0; i<pUnitSelection.length; i++){
+    pUnitSelection[i].addEventListener('change', getCountryInfo);
+}
 
 //calculate population density
 
