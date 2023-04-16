@@ -3,39 +3,98 @@
 Author: Braydon Lynch
 Date: 04/11/23
 */
+@media (min-width: 916px){  
+    /*Desktop*/
+    #countryInfoForm
+    {
+        background-color: rgb(70, 37, 94);
+    }
+    h2{
+        text-align: center;
+        background-color: rgb(134, 160, 187);
+    }
+    html{
+        height: 100%;
+    }
+    body{
+        width: 95%;
+        min-width: 640px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100%;
+    }
+    #population{
+        font-size: 200%;
+        color: black;
+    }
+    #pageTitle{
+        text-align: center;
+    }
+    #countrySelection{
+        text-align: center;
+    }
+    #flagImg{
+        padding-bottom: 20px;
+    }
+    #population{
+        padding-top: 50px;
+    }
+    #countrySelection{
+        transform: translateX(230px);
+    }
+    #pageTitle{
+        transform: translateX(230px);
+        color: white;
+    }
+}
 
-#countryInfoForm
-{
-    background-color: rgb(142, 201, 228);
-}
-h2{
-    text-align: center;
-    background-color: rgb(139, 145, 151);
-}
-html{
-    height: 100%;
- }
- body{
-    width: 95%;
-    min-width: 640px;
-    max-width: 960px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 100%;
- }
- #population{
-    font-size: 200%;
-    color: black;
- }
- #pageTitle{
-    text-align: center;
- }
- #countrySelection{
-    text-align: center;
- }
-#flagImg{
-    padding-bottom: 20px;
-}
-#population{
-    padding-top: 50px;
+@media (max-width: 915px){
+    /*Phone and Tablet*/
+    #countryInfoForm
+    {
+        background-color: rgb(70, 37, 94);
+        display: grid;
+        position: flex;
+        width: auto;
+        top: auto;
+    }
+    h2{
+        text-align: center;
+        background-color: rgb(134, 160, 187);
+    }
+    html{
+        height: 100%;
+    }
+    body{
+        width: 95%;
+        min-width: 640px;
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 100%;
+    }
+    #population{
+        font-size: 200%;
+        color: black;
+    }
+    #pageTitle{
+        text-align: center;
+        color: white;
+    }
+    #countrySelection{
+        text-align: center;
+    }
+    #flagImg{
+        padding-bottom: 20px;
+    }
+    #population{
+        padding-top: 50px;
+    }
+    #countrySelection{
+        transform: translateX(170px);
+    }
+    #pageTitle{
+        transform: translateX(170px);
+    }
 }

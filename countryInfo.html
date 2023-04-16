@@ -9,9 +9,14 @@
     <script src="countries.json" defer></script>
 </head>
 <body>
-
+    <style>
+        body {
+          background-image: url('space.jpg');
+        }
+        </style>
 <h2>COUNTRIES OF THE WORLD</h2>
     <div class="form" id="form">
+        <div class="grid-item">
     <form id="countryInfoForm" class="grid-container">
         <label for="countrySelection" id="pageTitle">Choose a Country from the list:</label><br>
         <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
@@ -36,7 +41,7 @@
         <select id="aUnitSelection" name="aUnitSelection">
             <option value="miles">Sq. Miles</option>
             <option value="km">Sq. KM</option>
-        </select><br>
+        </select><br><br>
         <input type="text" id="sqAreaDisplay" name="sqAreaDisplay"><br>
         </div>
 
@@ -45,17 +50,17 @@
         <h4>Population per:</h4>
         <input type="radio" name="pUnitSelection" value="miles" checked><label for="miles">Sq. Mile</label><br>
         <input type="radio" name="pUnitSelection" value="km"><label for="km">Sq. KM</label><br><br>
-        <input type="text" id="popPerDisplay" name="popPerDisplay">
+        <input type="text" id="popPerDisplay" name="popPerDisplay"><br><br>
         </div>
 
         <!--Percentage of World Population-->
         <div class="grid-item">
         <h4>Percentage of the Worlds Total Population:</h4>
-        <input type="value" id="percentDisplay" name="percentDisplay"><br>
+        <input type="value" id="percentDisplay" name="percentDisplay"><br><br>
         </div>
 
         <!--Wiki button-->
-        <div class="grid-item">
+        <div class="grid-item"><br><br>
         <button type="button" id="wikiCountryButton">Wiki Country</button>
         </div>
 
