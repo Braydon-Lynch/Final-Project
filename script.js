@@ -82,17 +82,13 @@ function getCountryInfo(menuRef)
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/" + selectedCountry); 
 }
 
+//area unit selection
 let aUnitSelection = document.querySelector("#aUnitSelection");
 aUnitSelection.addEventListener("change", getCountryInfo);
 
+//population per unit selection 
 let pUnitSelection = document.querySelectorAll("input[name='pUnitSelection']");
 for(let i=0; i<pUnitSelection.length; i++){
     pUnitSelection[i].addEventListener('change', getCountryInfo);
 }
 
-
-//calculate population density
-
-//convert sq miles to sq km and vice versa
-
-//convert per sq miles to per sq km and vice versa

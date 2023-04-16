@@ -11,7 +11,6 @@
 
 <h2>COUNTRIES OF THE WORLD</h2>
 
-    
     <form id="countryInfoForm">
         <label for="countrySelection">Choose a Country from the list</label><br>
         <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
@@ -22,10 +21,11 @@
         <label for="flagImg"><h4>Flag:</h4></label>
         <div id="flagImg"></div>
         
+        
         <!--Population-->
         <label for="populationBox"><h4>Population:</h4></label>
         <div id="population"></div><br>
-
+        
         <!--Area in Sq. miles/km-->
         <label for="aUnitSelection"><h4>Area in:</h4></label>
         <select id="aUnitSelection" name="aUnitSelection">
@@ -44,6 +44,10 @@
         <h4>Percentage of the Worlds Total Population:</h4>
         <input type="value" id="percentDisplay" name="percentDisplay"><br>
 
+        <!--Wiki button-->
+        <button onclick = "href=''https://en.wikipedia.org/wiki/" + selectedCountry;"
+
+        </div>
     </form>
 </body>
 </html>
