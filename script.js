@@ -1,3 +1,7 @@
+//Author: Braydon Lynch
+//Date: 04/16/23
+//Description: PROG1700 Final Project. This is the javascript coding used to create my "Countries of the World" website.
+
 
 //read data from csv file
 logJSONData();
