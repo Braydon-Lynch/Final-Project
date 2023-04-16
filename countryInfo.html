@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Countries of the World!</title>
     <link rel="stylesheet" href="countriesOfTheWorld.css">
+    <link rel="stylesheet" href="grid.css">
     <script src="script.js" defer></script>
     <script src="countries.json" defer></script>
 </head>
@@ -11,7 +12,7 @@
 
 <h2>COUNTRIES OF THE WORLD</h2>
 
-    <form id="countryInfoForm">
+    <form id="countryInfoForm" class="grid-container">
         <label for="countrySelection">Choose a Country from the list</label><br>
         <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
         </select><br><br>
@@ -49,5 +50,6 @@
 
         </div>
     </form>
+
 </body>
 </html>
