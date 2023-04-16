@@ -13,40 +13,51 @@
 <h2>COUNTRIES OF THE WORLD</h2>
 
     <form id="countryInfoForm" class="grid-container">
-        <label for="countrySelection">Choose a Country from the list</label><br>
+        <label for="countrySelection" id="pageTitle">Choose a Country from the list</label><br>
         <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
         </select><br><br>
 
         <!--Name and flag-->
+        <div class="grid-item">
         <label for="countryInfo"><h4>Info about the Selected Country!</h4></label>
         <label for="flagImg"><h4>Flag:</h4></label>
         <div id="flagImg"></div>
-        
+        </div>
         
         <!--Population-->
+        <div class="grid-item">
         <label for="populationBox"><h4>Population:</h4></label>
         <div id="population"></div><br>
+        </div>
         
         <!--Area in Sq. miles/km-->
+        <div class="grid-item">
         <label for="aUnitSelection"><h4>Area in:</h4></label>
         <select id="aUnitSelection" name="aUnitSelection">
             <option value="miles">Sq. Miles</option>
             <option value="km">Sq. KM</option>
         </select><br>
         <input type="text" id="sqAreaDisplay" name="sqAreaDisplay"><br>
+        </div>
 
         <!--Population per Area in Sq. miles/Km -->
+        <div class="grid-item">
         <h4>Population per:</h4>
         <input type="radio" name="pUnitSelection" value="miles" checked><label for="miles">Sq. Mile</label><br>
         <input type="radio" name="pUnitSelection" value="km"><label for="km">Sq. KM</label><br><br>
         <input type="text" id="popPerDisplay" name="popPerDisplay">
+        </div>
 
         <!--Percentage of World Population-->
+        <div class="grid-item">
         <h4>Percentage of the Worlds Total Population:</h4>
         <input type="value" id="percentDisplay" name="percentDisplay"><br>
+        </div>
 
         <!--Wiki button-->
+        <div class="grid-item">
         <button type="button" id="wikiCountryButton">Wiki Country</button>
+        </div>
 
         </div>
     </form>

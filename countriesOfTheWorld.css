@@ -6,7 +6,7 @@ Date: 04/11/23
 
 #countryInfoForm
 {
-    background-color: rgb(142, 201, 228);;
+    background-color: rgb(142, 201, 228);
     
 }
 h2{
@@ -24,4 +24,10 @@ html{
     margin-right: auto;
     min-height: 100%;
  }
- 
+ #population{
+    font-size: 200%;
+    color: black;
+ }
+ #pageTitle{
+    text-align: center;
+ }
