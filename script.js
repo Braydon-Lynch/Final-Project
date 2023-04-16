@@ -77,9 +77,14 @@ function getCountryInfo(menuRef)
     let percentOfWorldsPopulation = ((countryPopulation/worldPopulation)*100).toFixed(2);
     percentDisplay.value = `${percentOfWorldsPopulation}%`;
 
-    //change the href or the wikipage link/button
-    let wikiLink = document.querySelector("#wikiPageLink");
-    wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/" + selectedCountry); 
+    //wiki button
+    let wikiButton = document.querySelector("#wikiCountryButton");
+
+    //event listener for the wiki button
+    wikiButton.addEventListener("click", function(){
+        let selectedCountry=formRef["countrySelection"].value;
+        window.open("https://en.wikipedia.org/wiki/" + selectedCountry);
+    });
 }
 
 //area unit selection
@@ -91,4 +96,3 @@ let pUnitSelection = document.querySelectorAll("input[name='pUnitSelection']");
 for(let i=0; i<pUnitSelection.length; i++){
     pUnitSelection[i].addEventListener('change', getCountryInfo);
 }
-
