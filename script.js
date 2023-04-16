@@ -35,7 +35,7 @@ function getCountryInfo(menuRef)
     let populationDiv = document.querySelector("#population");
     for(let i=0; i<countryInfo.length; i++){
         if(countryInfo[i].Name===selectedCountry){
-            populationDiv.innerHTML=""+countryInfo[i].Population;
+            populationDiv.innerHTML=countryInfo[i].Population.toLocaleString();
             break;
         }
     }
@@ -86,6 +86,7 @@ function getCountryInfo(menuRef)
         window.open("https://en.wikipedia.org/wiki/" + selectedCountry);
     });
 }
+
 
 //area unit selection
 let aUnitSelection = document.querySelector("#aUnitSelection");

@@ -12,6 +12,7 @@
 
 <h2>COUNTRIES OF THE WORLD</h2>
 
+    <div class="form" id="form">
     <form id="countryInfoForm" class="grid-container">
         <label for="countrySelection" id="pageTitle">Choose a Country from the list</label><br>
         <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
@@ -19,7 +20,7 @@
 
         <!--Name and flag-->
         <div class="grid-item">
-        <label for="countryInfo"><h4>Info about the Selected Country!</h4></label>
+        <label for="countryInfo"></label>
         <label for="flagImg"><h4>Flag:</h4></label>
         <div id="flagImg"></div>
         </div>
@@ -61,6 +62,6 @@
 
         </div>
     </form>
-
+</div>
 </body>
 </html>
